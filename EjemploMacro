@@ -1,0 +1,20 @@
+Sub Indexar()
+Dim i As Integer
+
+Dim rg As Variant
+
+Set rg = Hoja1.Range("A1").CurrentRegion
+
+'Indexar a partir de la primera fila
+For i = 1 To rg.Rows.Count
+      Hoja1.Cells(i, 9) = i
+Next i
+
+'Indexar a partir de la primera 16 fila
+Set rg = Hoja1.Range("A16").CurrentRegion
+
+For i = 1 To rg.Rows.Count
+      Hoja1.Cells(i, 9) = i
+Next i
+
+End Sub
